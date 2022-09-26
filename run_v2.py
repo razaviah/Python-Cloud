@@ -16,6 +16,7 @@ import subprocess
 if __name__=='__main__':
     app_config = toml.load('config.toml')
     url = app_config['api']['url']
+    aws_output_dest_s3 = 's3://' + app_config['aws']['bucket'] + app_config['aws']['folder']
 
     # read the API
     print('Reading the API...')
@@ -64,7 +65,7 @@ if __name__=='__main__':
     print('datafrme saved to local')
 
     # use linux command to upload file to S3
-    subprocess.run(['aws', 's3', 'cp', 'jobs2.csv', 's3://de-exercise-data-bucket/input/job2.csv'])
+    subprocess.run(['aws', 's3', 'cp', 'jobs2.csv', aws_output_dest_s3])
   
     # Success.
     print('File uploading Done!')
