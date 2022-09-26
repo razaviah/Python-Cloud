@@ -6,4 +6,4 @@ bucket='wcd-amir/'
 folder='lab3/'
 
 [run]
-py_script="run_v2.py"
+py_script="run.py"
