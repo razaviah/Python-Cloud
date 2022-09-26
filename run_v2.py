@@ -28,40 +28,36 @@ if __name__=='__main__':
                  404 : "The resource could not be found."}
     print("Response Code:", response_API.status_code)
     print("Response Code meaning:", response_defi[response_API.status_code])
+    
+    data = response_API.text
     print('API Reading Done!')
 
-    # the company name
+    # building the dataframe
     print('Building the dataframe...')
-    company_list = [data['results'][i]['company']['name'] for i in range(len(data['results']))]
-    company_name = {'company':company_list}
+    data_json = json.loads(data)
 
-    # the locations
-    location_list = [data['results'][i]['locations'][0]['name'] for i in range(len(data['results']))]
-    location_name = {'locations':location_list}
-    
-    # the job name
-    job_list = [data['results'][i]['name'] for i in range(len(data['results']))]
-    job_name = {'job':job_list}
+    # converting the json file to a dataframe
+    df = pd.json_normalize(data_json["results"])
 
-    # the job type
-    job_type_list = [data['results'][i]['type'] for i in range(len(data['results']))]
-    job_type = {'job_type':job_type_list}
+    # taking certain columns which are in our interest
+    df = df[["company.name", "locations", "name", "type", "publication_date"]]
 
-    # the publication date
-    publication_date_list = [data['results'][i]['publication_date'] for i in range(len(data['results']))]
-    publication_date = {'publication_date':publication_date_list}
-
-    # merge the dictionaries with ChainMap and dict "from collections import ChainMap"
-    data = dict(ChainMap(company_name, location_name, job_name, job_type, publication_date))
-    df=pd.DataFrame.from_dict(data)
-
-    # Cut publication date to date
-    df['publication_date'] = df['publication_date'].str[:10]
+    # renaming those columns to have better headers for our table
+    df.rename(columns = {"company.name" : "company", "name" : "job", "type" : "job_type", "publication_date" : "date"}, inplace=True)
 
     # split location to city and country and drop the location column
-    df['city'] = df['locations'].str.split(',').str[0]
-    df['country'] = df['locations'].str.split(',').str[1]
+    df["locations"] = df["locations"].apply(lambda x : x[0]["name"])
+    df[['city','country']] = df.locations.str.split(", ", expand=True)
     df.drop('locations', axis=1, inplace=True)
+
+    # reordering the columns to be in the requested order
+    df = df[['date', 'job_type', 'job', 'company', 'city', 'country']]
+    
+    # Cut publication date (date and time) to date
+    df["date"] = df["date"].apply(lambda x : x[:10])
+
+    # filling the "null" values in our table
+    df['country'] = df['country'].fillna(value=df['city'])
 
     # save the dataframe to a csv file locally first
     df.to_csv('jobs2.csv', index=False)
