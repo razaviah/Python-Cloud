@@ -12,13 +12,6 @@ import os
 import subprocess
 
 
-def read_api(url):
-    """
-    Reads the API and returns the response
-    """
-    response = requests.get(url)
-    return response.json()
-
 # main function
 if __name__=='__main__':
     app_config = toml.load('config.toml')
@@ -26,7 +19,15 @@ if __name__=='__main__':
 
     # read the API
     print('Reading the API...')
-    data=read_api(url)
+    response_API = requests.get(url)
+
+    # getting the response status code and showing it to the user w/ its' definition
+    response_defi = {200 : "The request was successful.", \
+                 400 : "An error occurred in your request.", \
+                 403 : "The request was forbidden - usually because you hit a rate limit.", \
+                 404 : "The resource could not be found."}
+    print("Response Code:", response_API.status_code)
+    print("Response Code meaning:", response_defi[response_API.status_code])
     print('API Reading Done!')
 
     # the company name
