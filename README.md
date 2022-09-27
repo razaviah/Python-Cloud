@@ -32,6 +32,7 @@ The data we need from the result is from the “Response body”. The data we ne
 
 
 Then you will convert the result into a csv file, and save to S3 bucket.
+
 ## 2. Detail Steps
 
 1. Create an EC2 Instance on AWS.
@@ -45,15 +46,15 @@ Then you will convert the result into a csv file, and save to S3 bucket.
         - “job type”,
         - “publication date”, 
 
-    Convert the json data into a dataframe (use pandas library)
+5. Convert the json data into a dataframe (use pandas library)
 
-    Manipulate data: create a table include:
-        company_name
-        country (cut the string of “locations”, keep the country part)
-        city (cut the string of “locations”, keep the city part)
-        Job_name
-        Job_type
-        Date (cut string of “publication date” only keep date part) 
+6. Manipulate data: create a table include:
+        - company_name
+        - country (cut the string of “locations”, keep the country part)
+        - city (cut the string of “locations”, keep the city part)
+        - Job_name
+        - Job_type
+        - Date (cut string of “publication date” only keep date part) 
 
     This is the result sample:
     Untitled
