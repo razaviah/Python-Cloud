@@ -12,10 +12,13 @@ Content developed by: WeCloudData Academy
 You are going to get the job data from an API. Please go to the API web page first (https://www.themuse.com/developers/api/v2), and take a look at the page. We need 50 pages of jobs. So, let’s go to Job, and input 50 in the “page” field, and leave other fields blank.
 Untitled
 
+![API_50](https://user-images.githubusercontent.com/108837052/192638584-d491199d-587c-4a90-aecb-1d3b0255ad97.jpg)
 
 
 
 Then, Press “Run Example Request” button.
+
+
 
 
 Untitled
@@ -76,6 +79,7 @@ In the project (one-off project), the files include:
     A separate file to save your secrets
     Better to initiate your project environment with a shell script.
     Better to use a shell script to control the python script. 
+
 
 4. Diagram
 
