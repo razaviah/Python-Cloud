@@ -1,13 +1,11 @@
-# python-cloud
-
-Mini Project--Python Cloud Project (Job data)
+# Mini Project--Python Cloud Project (Job data)
 
 Data Engineering Diploma
 
 Content developed by: WeCloudData Academy
 
 
-1. Scenario
+## 1. Scenario
 
 You are going to get the job data from an API. Please go to the API web page first (https://www.themuse.com/developers/api/v2), and take a look at the page. We need 50 pages of jobs. So, let’s go to Job, and input 50 in the “page” field, and leave other fields blank.
 Untitled
@@ -34,18 +32,18 @@ The data we need from the result is from the “Response body”. The data we ne
 
 
 Then you will convert the result into a csv file, and save to S3 bucket.
-2. Detail Steps
+## 2. Detail Steps
 
-    Create an EC2 Instance on AWS.
-    Build your python Project on EC2 via VSCode. (You need VSCode remotely SSH connect to EC2)
-    Use the python script to read the API (use **requests library)**
+1. Create an EC2 Instance on AWS.
+2. Build your python Project on EC2 via VSCode. (You need VSCode remotely SSH connect to EC2)
+3. Use the python script to read the API (use **requests library)**
 
-    Get the data we want:
-        “company name”
-        “locations”,
-        “job name”,
-        “job type”,
-        “publication date”, 
+4. Get the data we want:
+        - “company name”
+        - “locations”,
+        - “job name”,
+        - “job type”,
+        - “publication date”, 
 
     Convert the json data into a dataframe (use pandas library)
 
