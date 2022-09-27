@@ -27,10 +27,10 @@ You will see the JSON result. This is the result you are going to use.
 ![API_result](https://user-images.githubusercontent.com/108837052/192638756-9bf889ee-0aba-40da-896c-988bc7fe5398.jpg)
 
 
-And in your lab you will use https://www.themuse.com/api/public/jobs?page=50 as your API url. Only focus on the “Response body”, be careful about the JSON nested level.
+And in your lab you will use https://www.themuse.com/api/public/jobs?page=50 **as your API url**. Only focus on the “Response body”, be careful about the JSON nested level.
 
 
-The data we need from the result is from the “Response body”. The data we need from the body are: publication date, job name, job type, job location, company name (Please find them from the body).
+The data we need from the result is from the “Response body”. The data we need from the body are: ***publication date***, ***job name***, ***job type***, ***job location***, ***company name*** (Please find them from the body).
 
 
 Then you will convert the result into a csv file, and save to S3 bucket.
