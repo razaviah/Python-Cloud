@@ -56,17 +56,17 @@ Then you will convert the result into a csv file, and save to S3 bucket.
         - Job_type
         - Date (cut string of “publication date” only keep date part) 
 
-    This is the result sample:
+7. This is the result sample:
     Untitled
 
-    Save the data into S3 bucket.
+8. Save the data into S3 bucket.
+    
     You have two ways in your python script to save the csv data to S3:
-    1). Use boto3 and AWS credentials.
-    2). Attach an IAM Role to EC2, so that your EC2 doesn't need credentials and boto3 to upload csv files. All you need to do is save the csv to your local EC2 and use aws cli (aws s3 cp ….)to upload the file to S3. The way to set IAM Role in EC2 as below:
-    Untitled
-    Untitled
+    1. Use boto3 and AWS credentials.
+    2. Attach an IAM Role to EC2, so that your EC2 doesn't need credentials and boto3 to upload csv files. All you need to do is save the csv to your local EC2 and use aws cli (aws s3 cp ….)to upload the file to S3. The way to set IAM Role in EC2 as below:
 
-3. Requirements
+
+## 3. Requirements
 
 In the project (one-off project), the files include:
 
