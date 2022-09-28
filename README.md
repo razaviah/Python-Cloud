@@ -1,6 +1,6 @@
 # Mini Project--Python Cloud Project (Job data)
 
-Data Engineering Diploma
+Python Cloud Project, Data Engineering Diploma Program, WeCloudData
 
 Content developed by: WeCloudData Academy
 
