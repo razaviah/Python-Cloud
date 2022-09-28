@@ -75,13 +75,13 @@ Then you will convert the result into a csv file, and save to S3 bucket.
 
 In the project (one-off project), the files include:
 
-    A shell script to set your virtual environment
-    .gitignore file
-    A python run script
-    A toml file if you need to config parameters
-    A separate file to save your secrets
-    Better to initiate your project environment with a shell script.
-    Better to use a shell script to control the python script. 
+- A shell script to set your virtual environment
+- .gitignore file
+- A python run script
+- A toml file if you need to config parameters
+- A separate file to save your secrets
+- Better to initiate your project environment with a shell script.
+- Better to use a shell script to control the python script. 
 
 
 4. Diagram
