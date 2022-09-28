@@ -87,4 +87,5 @@ In the project (one-off project), the files include:
 4. Diagram
 
 The project diagram is as below:
-Untitled
+![Python_project_1_lab_1](https://user-images.githubusercontent.com/108837052/192905682-28b6f3b9-0dee-4782-8902-a0a1e4efcf4c.png)
+
