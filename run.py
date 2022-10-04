@@ -1,6 +1,6 @@
 #!/usr/bin python3
 """
-This is the main file for the py_cloud project. It can be used at any situation
+This is the main file for the Python-Cloud project. It can be used at any situation
 """
 import requests
 import json
