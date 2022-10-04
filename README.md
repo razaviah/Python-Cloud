@@ -1,4 +1,4 @@
-# Python Cloud Project -- Mini Project (Job data)
+# Python Cloud Project -- Mini Project
 
 Python Cloud Project, Data Engineering Diploma Program, WeCloudData
 
