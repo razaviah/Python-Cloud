@@ -30,6 +30,7 @@ if __name__=='__main__':
     print("Response Code:", response_API.status_code)
     print("Response Code meaning:", response_defi[response_API.status_code])
     
+    # getting the text format of the API
     data = response_API.text
     print('API Reading Done!')
 
