@@ -24,8 +24,9 @@ Then, Press “Run Example Request” button.
 
 You will see the JSON result. This is the result you are going to use.
 
-
-![API_result](https://user-images.githubusercontent.com/108837052/192638756-9bf889ee-0aba-40da-896c-988bc7fe5398.jpg)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/108837052/192638756-9bf889ee-0aba-40da-896c-988bc7fe5398.jpg" alt="API_result"/>
+</p>
 
 
 And in your lab you will use https://www.themuse.com/api/public/jobs?page=50 **as your API url**. Only focus on the “Response body”, be careful about the JSON nested level.
