@@ -69,7 +69,15 @@ Then you will convert the result into a csv file, and save to S3 bucket.
     1. Use boto3 and AWS credentials.
     2. Attach an IAM Role to EC2, so that your EC2 doesn't need credentials and boto3 to upload csv files. All you need to do is save the csv to your local EC2 and use aws cli (aws s3 cp ….)to upload the file to S3. The way to set IAM Role in EC2 as below:
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/108837052/192640061-d090482b-d5bf-4328-aaf4-567a0ef65f45.jpg" alt="EC2_ADD_ROLE"/>
+</p>
+
 ![EC2_ADD_ROLE](https://user-images.githubusercontent.com/108837052/192640061-d090482b-d5bf-4328-aaf4-567a0ef65f45.jpg)
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/108837052/192640170-d092a16d-269c-4c9b-8831-463ffaac3cff.jpg" alt="ROLE"/>
+</p>
 
 ![ROLE](https://user-images.githubusercontent.com/108837052/192640170-d092a16d-269c-4c9b-8831-463ffaac3cff.jpg)
 
