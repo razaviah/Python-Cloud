@@ -1,9 +1,5 @@
 # Python Cloud Project -- Mini Project
 
-Python Cloud Project, Data Engineering Diploma Program, WeCloudData
-
-Content developed by: WeCloudData Academy
-
 
 ## 1. Scenario
 
